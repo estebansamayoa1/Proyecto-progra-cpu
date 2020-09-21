@@ -1,0 +1,5 @@
+class ALU:
+    def _init_(self, zero, overflow, negative):
+        self.zero = zero
+        self.overflow = overflow
+        self.negative = negative
