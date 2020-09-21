@@ -1,1 +1,4 @@
-
+class RAM:
+    def __init__ (self, data, instructions):
+        self.data = data
+        self.instructions = instructions
