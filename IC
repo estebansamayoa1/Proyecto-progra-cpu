@@ -1,1 +1,5 @@
-
+class IC:
+    def __init__(self, manufacturer, date, purpose):
+        self.manufacturer = manufacturer
+        self.date = date
+        self. purpose = purpose
