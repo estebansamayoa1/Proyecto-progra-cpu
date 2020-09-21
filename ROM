@@ -1,1 +1,5 @@
+class ROM:
+    def __init__ (self, bios, IST):
+        self.bios = bios
+        self.IST = IST
 
