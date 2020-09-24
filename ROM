@@ -1,5 +1,13 @@
-class ROM:
-    def __init__ (self, bios, IST):
-        self.bios = bios
-        self.IST = IST
+import yaml
 
+class ROM:
+    def __init__(self, IST):
+        with open ('bios.yaml','r') as bios:
+            self.bios = yaml.full_load(bios)
+
+    def __str__ (self):
+        return f"{self.bios}"
+
+churro = ROM ("que dice")
+
+print (churro)
