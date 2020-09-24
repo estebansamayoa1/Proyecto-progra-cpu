@@ -1,5 +1,22 @@
+from IC import IC
+
 class ALU:
     def _init_(self, zero, overflow, negative):
         self.zero = zero
         self.overflow = overflow
         self.negative = negative
+
+    def suma(self):
+        pass
+
+    def resta(self):
+        pass
+
+    def OR(self):
+        pass
+
+    def And(self):
+        pass
+
+    def Not(self):
+        pass
