@@ -1,1 +1,4 @@
+from IC import Intel, IC
 
+class CU(IC):
+        print(f"{Intel.manufacturer}\n {Intel.date}\n {Intel.name}\n {Intel.Htz}\n {Intel.cores}\n {Intel.Threads}")
