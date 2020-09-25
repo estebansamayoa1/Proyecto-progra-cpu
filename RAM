@@ -1,4 +1,8 @@
 class RAM:
-    def __init__ (self, data, instructions):
-        self.data = data
-        self.instructions = instructions
+    def __init__(self, instructions, upcode):
+        self.instructions=open('machinecode.cpufm', 'r')
+        self.upcode=[]
+        for line in self.instructions:
+            if not line.lower().startswith(";"):
+                self.upcode.append(line)
+
