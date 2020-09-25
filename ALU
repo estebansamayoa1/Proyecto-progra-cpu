@@ -1,22 +1,77 @@
 from IC import IC
+#from ROM import ROM
 
-class ALU:
-    def _init_(self, zero, overflow, negative):
-        self.zero = zero
-        self.overflow = overflow
-        self.negative = negative
+
+class ALU(IC):
+    def __init__(self, inputA, inputB):
+        #self.zero = zero
+        #self.overflow = overflow
+        #self.negative = negative
+        self.inputA = inputA 
+        self.inputB = inputB
 
     def suma(self):
-        pass
+
+        result = self.inputA + self.inputB
+        print ("la respuesta de la suma es: ")
+        print (result)
+        
+        if (result < 0):
+            return "negative"
+
+        if (result == 0):
+            return "zero"
+
+        elif(result <= 15 ):
+            return "Es la respuesta"
+
+        if (result > 15 and result % 2):
+            return "Overflow es impar igual 15"
+        else:
+            return "Overflow es par igual 14"
 
     def resta(self):
-        pass
+
+        result = self.inputA - self.inputB
+        print ("la respuesta de la resta es: ")
+        print (result)
+        
+        if (result < 0):
+            return "negative"
+
+        if (result == 0):
+            return "zero"
+
+        elif(result <= 15 ):
+            return "Es la respuesta"
+
+        if (result > 15 and result % 2):
+            return "Overflow es impar igual 15"
+        else:
+            return "Overflow es par igual 14"
 
     def OR(self):
-        pass
+
+        if (self.inputA > 0 or self.inputB > 0 ):
+            return "true"
+        else:
+            return "false"
 
     def And(self):
-        pass
+
+        if (self.inputA > 0 and self.inputB > 0):
+            return "True"
+        else:
+            return "false"
 
     def Not(self):
-        pass
+
+        if ():
+            pass
+
+
+ejemplo = ALU(-10,9)
+print(ejemplo.suma())
+print(ejemplo.resta())
+print(ejemplo.OR())
+print(ejemplo.And())
