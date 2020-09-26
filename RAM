@@ -1,4 +1,18 @@
-class RAM:
-    def __init__ (self, data, instructions):
-        self.data = data
-        self.instructions = instructions
+class RAM():
+    instructions=open('machinecode.cpufm', 'r')
+    upcode=[]
+    ins=[]
+
+    def __init__(self):
+        pass
+
+    def upcc(self):
+        for line in self.instructions:
+            if not line.lower().startswith(";"):
+                self.upcode.append(line)
+
+    def instruction(self):
+        ins1=self.upcode[2].split()
+        print(ins1)
+        self.ins=ins1[0]
+        return self.ins
