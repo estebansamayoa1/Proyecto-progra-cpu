@@ -17,10 +17,11 @@ class Rom:
     "1100":"JUMP_NEG",
     "1111":"HALT"
     }
-    bios=open('bios.yaml','r')
+    bios = open ("bios.yaml")
+    bo = yaml.load (bios, Loader = yaml.FullLoader)
 
     def __init__(self):
         pass
 
     def valores(self):
-        print (self.bios)
+        print (self.bo["RAM"]["data"])
