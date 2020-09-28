@@ -1,4 +1,18 @@
-from IC import Intel, IC
+from ALU import ALU
+from IC import IC
+import IC
+from Clock import delay
 
-class CU(IC):
-        print(f"{Intel.manufacturer}\n {Intel.date}\n {Intel.name}\n {Intel.Htz}\n {Intel.cores}\n {Intel.Threads}")
+
+
+
+
+class CU(ALU):
+ ejemplo = ALU(IC.A, IC.b)     
+ print(ejemplo.suma())
+ delay()
+ print(ejemplo.resta())
+ delay()
+ print(ejemplo.OR()) 
+ print(ejemplo.And())
+ 
