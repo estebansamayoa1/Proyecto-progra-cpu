@@ -24,4 +24,24 @@ class Rom:
         pass
 
     def valores(self):
-        print (self.bo["RAM"]["data"])
+        val = self.bo["RAM"]["data"]
+        return val
+    
+    def reloj(self):
+        f = self.bo["clock"]
+        print (f)
+
+    def vis (self):
+        v = self.bo["visualization"]["RAM"]
+        b = self.bo["visualization"]["Registers"]
+        c = self.bo["visualization"]["Clock"]
+        a = self.bo["visualization"]["ALU"]
+
+        print (v)
+
+
+churro = Rom()
+
+churro.valores()
+churro.reloj()
+churro.vis()
