@@ -1,1 +1,11 @@
+class Register:
+    data=0
+
+    def R0(self):
+        self.data=3
+
+    def R1(self):
+        self.data=4
+
+    def R2(self):
 
