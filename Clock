@@ -1,4 +1,19 @@
 import time
 
-def delay():
-    time.sleep(2)
+class delay:
+    i = 0.5
+    htz = 0
+    def Htz(self):
+        if(self.i == 0.5):
+         self.htz = 2
+
+        elif(self.i == 1):
+         self.htz = 4
+
+        elif(self.i == 1.5):
+         self.htz = 6   
+
+        elif(self.i == 2):
+         self.htz = 8   
+
+        time.sleep(self.htz)
