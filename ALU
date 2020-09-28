@@ -1,12 +1,10 @@
 from IC import IC
-#from ROM import ROM
+import IC
 
 
-class ALU(IC):
+
+class ALU():
     def __init__(self, inputA, inputB):
-        #self.zero = zero
-        #self.overflow = overflow
-        #self.negative = negative
         self.inputA = inputA 
         self.inputB = inputB
 
@@ -52,26 +50,21 @@ class ALU(IC):
 
     def OR(self):
 
-        if (self.inputA > 0 or self.inputB > 0 ):
-            return "true"
+        if (self.inputA < 15 and self.inputA > 0 or self.inputB > 0 and self.inputB < 15 ):
+            return "True"
         else:
-            return "false"
+            return "False"
 
     def And(self):
 
-        if (self.inputA > 0 and self.inputB > 0):
+        if (self.inputA < 15 and self.inputA > 0 and self.inputB > 0 and self.inputB < 15):
             return "True"
         else:
-            return "false"
+            return "False"
 
     def Not(self):
 
-        if ():
-            pass
-
-
-ejemplo = ALU(-10,9)
-print(ejemplo.suma())
-print(ejemplo.resta())
-print(ejemplo.OR())
-print(ejemplo.And())
+        if (self.inputA <= 15 and self.inputB <= 15 or self.inputA >= 0 and self.inputB >= 0):
+            return "False"
+        else:
+            return "True"
