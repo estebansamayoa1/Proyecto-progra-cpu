@@ -1,10 +1,11 @@
 import sys
 sys.path.append(".")
-#from CU import CU
+from CU import CU
 from RAM import RAM
 from Rom import Rom
 from Reg import Register
 from delay import delay
+
 
 def main():
     tabla = RAM()
@@ -13,13 +14,13 @@ def main():
     reloj = Rom()
     operacion = Rom()
     r1= Register()
-    hrtzz = delay()
-
+    delay1=delay()
+    delay1.Htz()
     registros.vis()
     visual.vis()
     reloj.vis()
     operacion.vis()
-    
+
 
 
 
@@ -30,10 +31,12 @@ def main():
             - Rodrigo Reyes
             - Esteban Samayoa\n
                 """)
+    delay1.tiempo()
     if visual.v == True:
         print ("*--------------------------------*")
         print ("              RAM                    ")
         tabla.valoress()
+    delay1.tiempo()
     if registros.b == True:
         print (f"""
 *---------------------------------*
@@ -41,18 +44,18 @@ def main():
         Primer registro : {r1.R0}
         Segundo registro : {r1.R1}
         Tercer registro : {r1.R2}
-        Cuarto registro : {r1.R3}
+
     """)
+    delay1.tiempo()
     if reloj.c == True:
         print ("*--------------------------------*")
         print (f"""
         Tiempo : {hrtzz.htz}
         """)
+    delay1.tiempo()
     if operacion.a == True:
-        pass
-
-    #cu1=CU()
-    #cu1.operate()
+        cu1=CU()
+        cu1.operate()
 
 
 main()
