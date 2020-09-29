@@ -7,7 +7,7 @@ class Register:
     R0=0
     R1=0
     R2=0
-    R3=0
+
 
 
     def getvalue(self, value):
@@ -21,4 +21,8 @@ class Register:
     def r1(self):
         self.R1=self.value
         print(self.R1)
+
+    def r2(self):
+        self.R2=self.value
+        print(self.R2)
 
