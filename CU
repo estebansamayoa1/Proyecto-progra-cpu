@@ -37,12 +37,56 @@ class CU():
                         posicion=int(self.ram1.d[line][5:10])
                         self.register.getvalue(self.rom1.val[posicion])
                         self.register.r0()
+
                     elif self.rom1.instructions[j]=="LOAD_R1":
                         self.rom1.valores()
                         posicion=int(self.ram1.d[line][5:10])
                         self.register.getvalue(self.rom1.val[posicion])
                         self.register.r1()
+
                     elif self.rom1.instructions[j]=="OUTPUT":
                         self.register.r1()
 
+                    elif self.rom1.instructions[j]=="ADD":
+                        imon=self.ram1.d[line][5:7]
+                        meybelyn=self.ram1.d[line][8:10]
+                        print(imon)
+                        print(meybelyn)
+                        alu1=ALU(self.register.R0,self.register.R1, 0)
+                        alu1.suma()
+
+                    elif self.rom1.instructions[j]=="SUB":
+                        imon=self.ram1.d[line][5:7]
+                        meybelyn=self.ram1.d[line][8:10]
+                        print(imon)
+                        print(meybelyn)
+                        alu1=ALU(self.register.R0,self.register.R1, 0)
+                        alu1.resta()
+                    elif self.rom1.instructions[j]=="HALT":
+                        exit()
+
+                    elif self.rom1.instructions[j]=="AND":
+                        imon=self.ram1.d[line][5:7]
+                        meybelyn=self.ram1.d[line][8:10]
+                        print(imon)
+                        print(meybelyn)
+                        alu1=ALU(self.register.R0,self.register.R1, 0)
+                        if alu1.And()==True:
+                            print ("La siguiente operación lógica es verdadera")
+                        else:
+                            print ("La operación es falsa")
+
+                    elif self.rom1.instructions[j]=="OR":
+                        imon=self.ram1.d[line][5:7]
+                        meybelyn=self.ram1.d[line][8:10]
+                        print(imon)
+                        print(meybelyn)
+                        alu1=ALU(self.register.R0,self.register.R1, 0)
+                        if alu1.OR()==True:
+                            print ("La siguiente operación lógica es verdadera")
+                        else:
+                            print ("La operación es falsa")
+                        
+            print("-------------------------------------------------")
+            self.delay1.tiempo()
  
