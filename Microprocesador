@@ -1,1 +1,12 @@
+import sys
+sys.path.append(".")
+from CU import CU
 
+def main():
+    print ("\nProyecto 1 CPU Simulator")
+    print ("Integrantes:\nJuan Luis Fernandez\nRodrigo Reyes\nEsteban Samayoa\n")
+    cu1=CU()
+    cu1.operate()
+
+
+main()
