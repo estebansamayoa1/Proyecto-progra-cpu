@@ -26,5 +26,5 @@ class RAM():
 
     def valoress(self):
         for i in range (len(self.rom1.val)):
-            print ("--------")
-            print(f"{i} || {self.rom1.val[i]}")
+            print ("            --------                        ")
+            print(f"            {i} || {self.rom1.val[i]}       ")
