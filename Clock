@@ -1,19 +1,16 @@
 import time
+import sys
+sys.path.append(".")
+from Rom import Rom
 
 class delay:
-    i = 0.5
+    rom1=Rom()
+    h = rom1.reloj()
     htz = 0
+
     def Htz(self):
-        if(self.i == 0.5):
-         self.htz = 2
+        self.htz=1/self.h
 
-        elif(self.i == 1):
-         self.htz = 4
-
-        elif(self.i == 1.5):
-         self.htz = 6   
-
-        elif(self.i == 2):
-         self.htz = 8   
-
+    def tiempo(self):
         time.sleep(self.htz)
+   
