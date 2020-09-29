@@ -32,9 +32,7 @@ class Rom:
         print (f)
 
     def vis (self):
-        v = self.bo["visualization"]["RAM"]
-        b = self.bo["visualization"]["Registers"]
-        c = self.bo["visualization"]["Clock"]
-        a = self.bo["visualization"]["ALU"]
-
-        print (v)
+        self.v = self.bo["visualization"]["RAM"]
+        self.b = self.bo["visualization"]["Registers"]
+        self.c = self.bo["visualization"]["Clock"]
+        self.a = self.bo["visualization"]["ALU"]
