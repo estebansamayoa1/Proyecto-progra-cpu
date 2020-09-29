@@ -40,8 +40,3 @@ class Rom:
         print (v)
 
 
-churro = Rom()
-
-churro.valores()
-churro.reloj()
-churro.vis()
