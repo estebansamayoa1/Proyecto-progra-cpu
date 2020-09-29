@@ -38,10 +38,3 @@ class Rom:
         a = self.bo["visualization"]["ALU"]
 
         print (v)
-
-
-churro = Rom()
-
-churro.valores()
-churro.reloj()
-churro.vis()
